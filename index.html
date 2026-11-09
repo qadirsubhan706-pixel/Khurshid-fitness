@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Khurshid Fitness Studio in Forest Bazar, Peshawar. Fitness, strength training and cardio. Contact us today.">
+<title>Khurshid Fitness Studio | Peshawar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #d9ad54;
+  --black: #090909;
+  --card: #151515;
+  --white: #fff;
+  --gray: #aaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 78px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #080808;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #252525;
+}
+
+.logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 12px;
+  color: #ddd;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.nav-btn {
+  background: var(--gold);
+  color: #111;
+  padding: 12px 19px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 28px;
+}
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.52)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1800') center/cover;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.tag {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(55px, 9vw, 100px);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.hero h1 span,
+.section-title span {
+  color: var(--gold);
+}
+
+.hero p.desc {
+  color: #ccc;
+  max-width: 480px;
+  line-height: 1.9;
+  margin: 22px 0 30px;
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #111;
+  padding: 15px 27px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: .3s;
+  border: 1px solid var(--gold);
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  background: #111;
+  padding: 38px 8%;
+  text-align: center;
+  border-bottom: 1px solid #292929;
+}
+
+.stat h2 {
+  color: var(--gold);
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+}
+
+.stat p {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.section {
+  padding: 100px 8%;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-img {
+  min-height: 430px;
+  background: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=900') center/cover;
+  border: 5px solid #242424;
+  position: relative;
+}
+
+.about-img:after {
+  content: 'FITNESS • STRENGTH • HEALTH';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--gold);
+  color: #111;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(38px, 5vw, 57px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heading .tag {
+  margin-bottom: 12px;
+}
+
+.programs {
+  background: #101010;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.program-card {
+  background: var(--card);
+  border: 1px solid #292929;
+  transition: .4s;
+  overflow: hidden;
+}
+
+.program-card:hover {
+  transform: translateY(-9px);
+  border-color: var(--gold);
+}
+
+.program-img {
+  height: 230px;
+  background-position: center;
+  background-size: cover;
+}
+
+.weight {
+  background-image: url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800');
+}
+
+.cardio {
+  background-image: url('https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=800');
+}
+
+.training {
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800');
+}
+
+.program-info {
+  padding: 25px;
+}
+
+.program-info h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.program-info p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.trainer {
+  background: #090909;
+}
+
+.trainer-box {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
+  gap: 55px;
+  background: #151515;
+  border: 1px solid #292929;
+  padding: 35px;
+}
+
+.trainer-img {
+  height: 340px;
+  background:
+    linear-gradient(0deg,rgba(0,0,0,.2),rgba(0,0,0,.2)),
+    url('https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=800') center/cover;
+}
+
+.trainer-info h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.trainer-info h3 span {
+  color: var(--gold);
+}
+
+.trainer-info p {
+  color: #aaa;
+  line-height: 2;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  background: #111;
+}
+
+.rating {
+  color: var(--gold);
+  font-size: 27px;
+  margin: 12px 0;
+}
+
+.rating strong {
+  color: white;
+  font-size: 18px;
+}
+
+.review-card {
+  background: #191919;
+  border: 1px solid #303030;
+  padding: 30px;
+  transition: .3s;
+}
+
+.review-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.stars {
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.review-card p {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 22px;
+}
+
+.review-card h4 {
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.review-note {
+  color: #888;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact {
+  background: #090909;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.contact-card {
+  background: #151515;
+  border: 1px solid #333;
+  padding: 35px;
+}
+
+.contact-card h3 {
+  color: var(--gold);
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  color: #bbb;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+.contact-card .btn {
+  margin: 5px 0;
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  margin-top: 30px;
+}
+
+footer {
+  background: #050505;
+  text-align: center;
+  padding: 45px 15px;
+  border-top: 1px solid #252525;
+}
+
+footer p {
+  color: #888;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 19px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 999;
+  box-shadow: 0 4px 20px #000;
+}
+
+@media(max-width:850px) {
+  header {
+    padding: 0 5%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    background: #101010;
+    flex-direction: column;
+    padding: 25px;
+    gap: 22px;
+    border-top: 1px solid #333;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trainer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-img {
+    height: 300px;
+  }
+}
+
+@media(max-width:560px) {
+  .hero {
+    min-height: 570px;
+    padding: 65px 6%;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .stats {
+    padding: 25px 3%;
+  }
+
+  .stat h2 {
+    font-size: 26px;
+  }
+
+  .stat p {
+    font-size: 10px;
+  }
+
+  .section {
+    padding: 70px 6%;
+  }
+
+  .cards,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    min-height: 300px;
+  }
+
+  .trainer-box {
+    padding: 20px;
+  }
+
+  .trainer-img {
+    height: 270px;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="#home">KHURSHID<span> FITNESS</span></a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="#home" onclick="toggleMenu()">HOME</a>
+    <a href="#about" onclick="toggleMenu()">ABOUT</a>
+    <a href="#programs" onclick="toggleMenu()">PROGRAMS</a>
+    <a href="#trainer" onclick="toggleMenu()">TRAINER</a>
+    <a href="#reviews" onclick="toggleMenu()">REVIEWS</a>
+    <a href="#contact" class="nav-btn" onclick="toggleMenu()">JOIN NOW</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="tag">WELCOME TO KHURSHID FITNESS STUDIO</p>
+    <h1>BUILD YOUR<br><span>STRONGER</span> SELF.</h1>
+    <p class="desc">Train harder. Stay stronger. Build a healthier lifestyle. Start your fitness journey with Khurshid Fitness Studio, Peshawar.</p>
+    <a href="#contact" class="btn">JOIN OUR GYM →</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h2>4.5/5 ⭐</h2>
+    <p>Customer Rating</p>
+  </div>
+  <div class="stat">
+    <h2>43+</h2>
+    <p>Customer Reviews</p>
+  </div>
+  <div class="stat">
+    <h2>FITNESS</h2>
+    <p>Our Passion</p>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-img"></div>
+  <div>
+    <p class="tag">ABOUT OUR STUDIO</p>
+    <h2 class="section-title">YOUR FITNESS.<br><span>OUR PASSION.</span></h2>
+    <p class="about-text">Khurshid Fitness Studio is a local fitness centre located at Forest Bazar, Agriculture University, Peshawar. We welcome individuals looking to improve their fitness, build strength and maintain a healthy lifestyle.</p>
+    <a href="#programs" class="btn">DISCOVER MORE →</a>
+  </div>
+</section>
+
+<section class="section programs" id="programs">
+  <div class="heading">
+    <p class="tag">WHAT WE OFFER</p>
+    <h2 class="section-title">OUR <span>PROGRAMS</span></h2>
+  </div>
+
+  <div class="cards">
+    <div class="program-card">
+      <div class="program-img weight"></div>
+      <div class="program-info">
+        <h3>WEIGHT TRAINING</h3>
+        <p>Build strength and improve your fitness through resistance training.</p>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <div class="program-img cardio"></div>
+      <div class="program-info">
+        <h3>CARDIO FITNESS</h3>
+        <p>Improve stamina and support a healthy, active lifestyle.</p>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <div class="program-img training"></div>
+      <div class="program-info">
+        <h3>PERSONAL GUIDANCE</h3>
+        <p>Get helpful workout guidance in a supportive gym environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section trainer" id="trainer">
+  <div class="heading">
+    <p class="tag">MEET YOUR TRAINER</p>
+    <h2 class="section-title">MR. <span>KHURSHID</span></h2>
+  </div>
+
+  <div class="trainer-box">
+    <div class="trainer-img"></div>
+    <div class="trainer-info">
+      <h3>YOUR FITNESS JOURNEY <span>STARTS HERE</span></h3>
+      <p>Get guidance and support on your fitness journey with Mr. Khurshid. Dedicated to helping members improve their strength, fitness and workout consistency in a friendly gym environment.</p>
+      <a href="https://wa.me/923349090726" class="btn">CONTACT THE STUDIO →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="heading">
+    <p class="tag">MEMBER FEEDBACK</p>
+    <h2 class="section-title">WHAT PEOPLE <span>SAY</span></h2>
+    <div class="rating">★★★★★ <strong>4.5/5</strong></div>
+    <p style="color:#aaa;font-size:13px">Based on 43 customer reviews</p>
+  </div>
+
+  <div class="cards">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"It is a well-equipped club with all the necessary equipment. Excellent fitness gym, not of international standard but very reasonable and fee is low. Good for students of university. Awesome environment and well-educated gym trainer Mr. Khurshid."</p>
+      <h4>Customer Review</h4>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"A local gym and fitness centre offering workout facilities for people looking to improve their health, build strength or achieve specific fitness goals."</p>
+      <h4>Studio Description</h4>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>Looking for a gym with weight training, cardio equipment and a supportive environment? Visit Khurshid Fitness Studio in Forest Bazar, Peshawar.</p>
+      <h4>About The Studio</h4>
+    </div>
+  </div>
+
+  <p class="review-note">Rating and review count provided for the studio. Individual customer ratings are not independently verified.</p>
+
+  <div style="text-align:center;margin-top:35px">
+    <a href="https://maps.app.goo.gl/9ibuxyvUNENZbnPA9" target="_blank" class="btn">VIEW GOOGLE LISTING →</a>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="heading">
+    <p class="tag">GET IN TOUCH</p>
+    <h2 class="section-title">START YOUR <span>JOURNEY</span></h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>📞 PHONE & WHATSAPP</h3>
+      <p>0334 9090726</p>
+      <a href="tel:+923349090726" class="btn">CALL NOW</a>
+      <br><br>
+      <a href="https://wa.me/923349090726?text=Hello%2C%20I%20want%20to%20know%20about%20Khurshid%20Fitness%20Studio." class="btn">WHATSAPP US</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>📍 OUR LOCATION</h3>
+      <p>Forest Bazar, Agriculture University, Palosi Talarzai, Peshawar, Pakistan – 25000</p>
+      <a href="https://maps.app.goo.gl/9ibuxyvUNENZbnPA9" target="_blank" class="btn">GET DIRECTIONS →</a>
+    </div>
+  </div>
+
+  <iframe
+    class="map"
+    src="https://maps.google.com/maps?q=Agriculture%20University%20Peshawar%20Forest%20Bazar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    loading="lazy"
+    title="Khurshid Fitness Studio location">
+  </iframe>
+</section>
+
+<footer>
+  <a class="logo" href="#home">KHURSHID<span> FITNESS</span></a>
+  <p>TRAIN HARD. STAY STRONG. LIVE HEALTHY.</p>
+  <p>Forest Bazar, Agriculture University, Peshawar</p>
+  <p>© 2026 Khurshid Fitness Studio. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/923349090726" target="_blank">☏ WhatsApp</a>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
